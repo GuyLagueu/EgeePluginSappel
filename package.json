@@ -1,0 +1,16 @@
+{
+  "name": "egeesappel",
+  "version": "1.0.0",
+  "description": "This is sappel protocole for read and configure water or heath device using cordova plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sappel",
+    "egee",
+    "Ionic"
+  ],
+  "author": "Guy LAGUEU",
+  "license": "ISC"
+}
