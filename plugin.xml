@@ -23,7 +23,7 @@
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
 		<source-file src="src/android/EgeeSappel.java" target-dir="src/cordova/plugin/egeesappel/EgeeSappel" />
-		<lib-file src="src/android/libs/izar-library.i-c-t-2.3.1-android.jar" arch="device" />
+		<source-file src="src/android/libs/izar-library.i-c-t-2.3.1-android.jar" target-dir="libs" framework="true"/>
 	</platform>
 
 	<platform name="windows">

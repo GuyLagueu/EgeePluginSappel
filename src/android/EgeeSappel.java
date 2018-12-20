@@ -16,6 +16,7 @@ public class EgeeSappel extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+
         if (action.equals("add")) {
             this.add(args, callbackContext);
             return true;
@@ -23,13 +24,16 @@ public class EgeeSappel extends CordovaPlugin {
         } else if (action.equals("substract")) {
             this.substract(args, callbackContext);
             return true;
+
         } else if (action.equals("getlicense")) {
             this.getlicense(callbackContext);
             return true;
+
         } else if (action.equals("getlicence")) {
             this.getlicence(callbackContext);
             return true;
         }
+
         return false;
     }
 
