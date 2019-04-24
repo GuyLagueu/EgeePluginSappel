@@ -1,6 +1,6 @@
 {
   "name": "egeesappel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is sappel protocole for read and configure water or heath device using cordova plugin",
   "main": "index.js",
   "scripts": {
