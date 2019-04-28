@@ -1,3 +1,4 @@
+cordova.define("cordova.plugin.egeesappel.EgeeSappel", function(require, exports, module) {
 var exec = require('cordova/exec');
 
 var EgeeSappel = {
@@ -36,5 +37,53 @@ var EgeeSappel = {
         );
     },
 
+     /**
+     *  Gets 'true' or 'false' if device configuration is avalable or if not
+     * @param param1 opto mac address
+     * @param param2 opto head password
+     * @param 	win	callback function
+     * @param 	fail
+     */
+    readDeviceConfiguration: function(param1, param2, win, fail) {
+        if (typeof win != "function") {
+            return;
+        }
+        cordova.exec(
+            function(result) {
+                win(result == "1");
+            },
+            fail, 'EgeeSappel', 'readDeviceConfiguration', [param1, param2]
+        );
+    },
+
+    /**
+     *  Gets 'true' or 'false' if frame interpretation success or if not
+     * @param param frame to interpret
+     * @param 	win	callback function
+     * @param 	fail
+     */
+    interpret: function(param, win, fail) {
+        if (typeof win != "function") {
+            return;
+        }
+        cordova.exec(
+            function(result) {
+                win(result == "1");
+            },
+            fail, 'EgeeSappel', 'interpret', [param]
+        );
+    },
+
+    /**
+     *  Gets 'true' or 'false' if frame interpretation success or if not
+     * @param param frame to interpret head
+     * @param 	cb	callback function
+     */
+    interpretHead: function(param, success, error) {
+        cordova.exec(success,error, 'EgeeSappel', 'interpretHead', [param]);
+    },
+
 };
 module.exports = EgeeSappel;
+
+});
